@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { fetchTimetables } from '../actions';
 import {connect} from 'react-redux';
 import ListContainer from './ListContainer';
-import Storage from '../lib/storage';
+import Storage from '../services/storage';
 import DisplayScheduleContainer from '../containers/DisplayScheduleContainer';
 
 import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
-import DisplaySchedule from '../presentation/Display';
+
 
 class Root extends Component {
 
