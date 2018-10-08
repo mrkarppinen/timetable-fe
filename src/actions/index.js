@@ -1,7 +1,10 @@
+import {loadTimetable} from '../services/timetable-service';
+
 export const FETCH_TIMETABLES_START = "feth_timetables_start";
 export const FETCH_TIMETABLES = "fetch_timetables";
 export const FETCH_TIMETABLES_DONE = "fetch_timetables_done";
 export const FETCH_ONE_START = "fetch_one_start";
+
 
 
 const startFetchingTimetables = () => {
@@ -27,9 +30,9 @@ export const fetchTimetables = (ids) => {
     console.log(process.env.REACT_APP_TIMETABLE_SERVICE);
     return dispatch => {
         dispatch(startFetchingTimetables());
-        return fetch(`http://localhost:3001/api/line?stop=${ids}`)
-        .then( res => res.json() )
+        return loadTimetable(ids)
         .then( data => {
+            console.log(data);
             dispatch(fetchingTimetablesDone(data.timetables));
         })
         .catch( err => {
@@ -42,8 +45,7 @@ export const fetchTimetables = (ids) => {
 export const fetchOneTimetable = (id) => {
     return dispatch => {
         dispatch(startFetchingOne());
-        return fetch(`http://localhost:3001/api/line?stop=${id}`)
-        .then( res => res.json() )
+        return loadTimetable(id)
         .then( data => {
             dispatch(fetchingTimetablesDone(data.timetables));
         })

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Storage from '../lib/storage';
+import Storage from '../services/storage';
 import styled from 'styled-components';
 import StopForm from './StopForm';
 
