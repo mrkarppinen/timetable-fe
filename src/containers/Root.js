@@ -7,9 +7,11 @@ import Storage from '../services/storage';
 import DisplayScheduleContainer from '../containers/DisplayScheduleContainer';
 
 import {
-  BrowserRouter as Router,
-  Route
+  HashRouter as Router,
+  Route,
+  Switch
 } from 'react-router-dom'
+import { S_IWGRP } from 'constants';
 
 
 class Root extends Component {
@@ -34,8 +36,10 @@ class Root extends Component {
     return (
       <Router>
       <div className="app">
-        <Route exact path="/" component={ListContainer}/>
+        <Switch>
         <Route path="/stop/:id?" component={DisplayScheduleContainer} />
+        <Route path="*" component={ListContainer}/>
+        </Switch>
       </div>
       </Router>
     );
