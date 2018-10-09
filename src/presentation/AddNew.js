@@ -7,10 +7,15 @@ const Button = styled.button`
     width: 100px;
     height: 40px;
     background: none;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    /*border: 1px solid #ccc;
+    border-radius: 10px;*/
+    border: none;
     color: #ccc;
     font-size: 1.5rem;
+
+    :focus{
+        outline: none;
+    }
 
 `;
 
@@ -27,6 +32,20 @@ const Form = styled.form`
 
     input {
         text-align: center;
+        border: none;
+        border-bottom: 1px solid #ccc;
+    }
+`;
+
+const AddButton = styled.button`
+    background: none;
+    /*border: 1px solid #ccc;
+    border-radius: 15px;*/
+    border: none;
+    padding: 1rem;
+
+    :focus {
+        outline: none;
     }
 `;
 
@@ -71,9 +90,9 @@ export default class AddNew extends React.Component {
         return (
             <div className="new-form" style={{marginTop: '1rem'}}  >
                 <div><Button id={toggleButtonClass} type="button" onClick={ this.toggleForm } >{toggleButtonValue}</Button></div>
-                {  this.state.displayForm && <Form id="add-form" onSubmit={ this.onSubmit } >
-                    <input type="text" name="stopId"  />
-                    <button id="submit-form" type="submit" >Add</button> 
+                {  this.state.displayForm && <Form id="add-form" onSubmit={ this.onSubmit } autoComplete="off" >
+                    <input type="text" name="stopId" placeholder="id" />
+                    <AddButton id="submit-form" type="submit" >Add</AddButton> 
                 </Form>
                 }
             </div>

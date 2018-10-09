@@ -16,11 +16,11 @@ div {
 `;
 
 
-const DisplaySchedule = ({title, loaded, timetable}) => (
+const DisplaySchedule = ({title, loaded, timetable, id}) => (
     <div>
     {!loaded && <div>Loading...</div> }
     {loaded && <Container>
-        <h1>{title}</h1>
+        <h1>{title} ({id})</h1>
         {timetable.map( item => <div key={item.time}><Departure time={item.time} lines={item.lines} /></div>) }
     </Container> }
     </div>

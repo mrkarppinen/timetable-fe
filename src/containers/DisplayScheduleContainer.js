@@ -4,7 +4,7 @@ import DisplaySchedule from '../presentation/Display';
 const mapStateToProps = (state, props) => {
     const id = props.match.params.id;
     let loaded = false;
-    let stop = {title: '', timetable: []};
+    let stop = {title: '', timetable: [], id: ''};
     if (state.timetable.list && state.timetable.list.length > 0){
         stop = state.timetable.list[id];
         loaded = true;
@@ -13,7 +13,8 @@ const mapStateToProps = (state, props) => {
     return { 
         title: stop.title,
         timetable: stop.timetable,
-        loaded: loaded
+        loaded: loaded,
+        id: stop.id
      }
 };
 

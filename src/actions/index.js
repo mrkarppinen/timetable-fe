@@ -27,12 +27,10 @@ const fetchingTimetablesDone = (timetables = []) => {
 }
 
 export const fetchTimetables = (ids) => {
-    console.log(process.env.REACT_APP_TIMETABLE_SERVICE);
     return dispatch => {
         dispatch(startFetchingTimetables());
         return loadTimetable(ids)
         .then( data => {
-            console.log(data);
             dispatch(fetchingTimetablesDone(data.timetables));
         })
         .catch( err => {

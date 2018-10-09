@@ -7,7 +7,8 @@ import { withRouter } from 'react-router-dom'
 class ListItem extends React.Component {
 
     static propTypes = {
-        title: PropTypes.string.isRequired
+        title: PropTypes.string.isRequired,
+        id: PropTypes.string.isRequired
     };
 
     constructor(props){
@@ -30,7 +31,7 @@ class ListItem extends React.Component {
 
         return(
             <div className="list-item">
-                <h2 onClick={ () => { this.props.history.push('/stop/'+this.props.index)  } } style={{cursor: 'pointer'}} >{this.props.title}</h2>
+                <h2 onClick={ () => { this.props.history.push('/stop/'+this.props.index)  } } style={{cursor: 'pointer'}} >{this.props.title} ({this.props.id})</h2>
                 <div style={{display: 'flex', justifyContent: 'space-evenly' }} >
                     { departures.length>0 && departures.map( item => <div key={item.time} ><Departure time={item.time} lines={item.lines} /></div> )}
                 </div>
