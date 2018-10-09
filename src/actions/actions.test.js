@@ -19,11 +19,11 @@ describe('Actions', () => {
         test('should fetch timetables', async () => {
 
             fetchMock
-            .getOnce('end:/api/line?stop=1234', { body: { timetables: [{title: 'st1'}] }, headers: { 'content-type': 'application/json' } });
+            .postOnce('*', { body: { data: {stops: [{name: 'st1', 'stoptimesForServiceDate': [] }]}}, headers: { 'content-type': 'application/json' } });
 
             const expectedActions = [
                 { type: FETCH_TIMETABLES_START },
-                { type: FETCH_TIMETABLES_DONE, timetables: [{title: 'st1'}] }
+                { type: FETCH_TIMETABLES_DONE, timetables: [{title: 'st1', id: '1234', lines: [], timetable: []}] }
             ];
 
             const store = mockStore({timetables: []});

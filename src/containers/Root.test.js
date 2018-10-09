@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import Storage from '../lib/storage';
+import Storage from '../services/storage';
 import {Root} from './Root';
 import sinon from 'sinon';
 

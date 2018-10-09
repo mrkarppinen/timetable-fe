@@ -16,6 +16,20 @@ const Form = styled.form`
 
     input {
         text-align: center;
+        border: none;
+        border-bottom: 1px solid #ccc;
+    }
+`;
+
+const AddButton = styled.button`
+    background: none;
+    /*border: 1px solid #ccc;
+    border-radius: 15px;*/
+    border: none;
+    padding: 1rem;
+
+    :focus {
+        outline: none;
     }
 `;
 
@@ -23,7 +37,7 @@ const Form = styled.form`
 const StopForm = ({onSubmit}) => (
     <Form id="add-form" onSubmit={ onSubmit } >
                     <input type="text" name="stopId"  />
-                    <button id="submit-form" type="submit" >Add</button> 
+                    <AddButton id="submit-form" type="submit" >Add</AddButton> 
     </Form>
 );
 

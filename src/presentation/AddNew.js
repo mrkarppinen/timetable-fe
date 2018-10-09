@@ -8,12 +8,22 @@ const Button = styled.button`
     width: 100px;
     height: 40px;
     background: none;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    /*border: 1px solid #ccc;
+    border-radius: 10px;*/
+    border: none;
     color: #ccc;
     font-size: 1.5rem;
 
+    :focus{
+        outline: none;
+    }
+
 `;
+
+
+
+
+
 
 export default class AddNew extends React.Component {
 
