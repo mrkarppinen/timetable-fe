@@ -22,9 +22,6 @@ const Button = styled.button`
 
 
 
-
-
-
 export default class AddNew extends React.Component {
 
     static propTypes = {
