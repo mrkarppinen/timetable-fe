@@ -2,7 +2,7 @@
   "name": "timetable-fe",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://mrkarppinen.github.io/timetable-fe/docs",
+  "homepage": "https://mrkarppinen.github.io/timetable-fe/docs",
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -13,7 +13,7 @@
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
     "styled-components": "^3.4.9",
-    "timetable-client": "git+https://github.com/mrkarppinen/timetable-client.git"
+    "timetable-client": "git+https://github.com/mrkarppinen/timetable-client.git#v1.1"
   },
   "scripts": {
     "start": "react-scripts start",

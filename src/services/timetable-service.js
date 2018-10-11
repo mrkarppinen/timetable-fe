@@ -9,7 +9,7 @@ const loadTimetable = (id) => {
 
 
 const loadFromApi = (id) => {
-    const promises = typeof id === 'string' ? [Promise.resolve(timeTableclient.get(id, formattedDate())).then( res => ({...res, id}) )] : id.map( id => Promise.resolve(timeTableclient.get(id, formattedDate())).then( res => ({...res, id}) ) );
+    const promises = typeof id === 'string' ? [Promise.resolve(timeTableclient.get(id, formattedDate()))] : id.map( id => Promise.resolve(timeTableclient.get(id, formattedDate())) );
     return Promise.all(promises).then( arr => ({timetables: arr}) );
 };
 

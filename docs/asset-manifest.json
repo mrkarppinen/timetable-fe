@@ -1,13 +1,13 @@
 {
-  "main.css": "/timetable-fe/docs/static/css/main.1569018e.chunk.css",
-  "main.js": "/timetable-fe/docs/static/js/main.f80b43e7.chunk.js",
-  "main.js.map": "/timetable-fe/docs/static/js/main.f80b43e7.chunk.js.map",
-  "static/js/1.d776c85b.chunk.js": "/timetable-fe/docs/static/js/1.d776c85b.chunk.js",
-  "static/js/1.d776c85b.chunk.js.map": "/timetable-fe/docs/static/js/1.d776c85b.chunk.js.map",
+  "main.css": "/timetable-fe/docs/static/css/main.96fdfd6e.chunk.css",
+  "main.js": "/timetable-fe/docs/static/js/main.a1f5b932.chunk.js",
+  "main.js.map": "/timetable-fe/docs/static/js/main.a1f5b932.chunk.js.map",
+  "static/js/1.ec450b31.chunk.js": "/timetable-fe/docs/static/js/1.ec450b31.chunk.js",
+  "static/js/1.ec450b31.chunk.js.map": "/timetable-fe/docs/static/js/1.ec450b31.chunk.js.map",
   "runtime~main.js": "/timetable-fe/docs/static/js/runtime~main.5e7ab1e1.js",
   "runtime~main.js.map": "/timetable-fe/docs/static/js/runtime~main.5e7ab1e1.js.map",
-  "static/css/main.1569018e.chunk.css.map": "/timetable-fe/docs/static/css/main.1569018e.chunk.css.map",
+  "static/css/main.96fdfd6e.chunk.css.map": "/timetable-fe/docs/static/css/main.96fdfd6e.chunk.css.map",
   "index.html": "/timetable-fe/docs/index.html",
-  "precache-manifest.cd1e9875966839c44b49a83bc858a613.js": "/timetable-fe/docs/precache-manifest.cd1e9875966839c44b49a83bc858a613.js",
+  "precache-manifest.d7c01d9b329c3a04391463b6c8a84688.js": "/timetable-fe/docs/precache-manifest.d7c01d9b329c3a04391463b6c8a84688.js",
   "service-worker.js": "/timetable-fe/docs/service-worker.js"
 }
