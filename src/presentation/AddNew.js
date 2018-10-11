@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Storage from '../lib/storage';
 import styled from 'styled-components';
+import StopForm from './StopForm';
 
 const Button = styled.button`
     width: 100px;
@@ -13,23 +14,6 @@ const Button = styled.button`
     font-size: 1.5rem;
 
 `;
-
-const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 1rem;
-    width: 150px;
-
-    input, button {
-        margin-bottom: 1rem;
-    }
-
-    input {
-        text-align: center;
-    }
-`;
-
 
 export default class AddNew extends React.Component {
 
@@ -71,11 +55,7 @@ export default class AddNew extends React.Component {
         return (
             <div className="new-form" style={{marginTop: '1rem'}}  >
                 <div><Button id={toggleButtonClass} type="button" onClick={ this.toggleForm } >{toggleButtonValue}</Button></div>
-                {  this.state.displayForm && <Form id="add-form" onSubmit={ this.onSubmit } >
-                    <input type="text" name="stopId"  />
-                    <button id="submit-form" type="submit" >Add</button> 
-                </Form>
-                }
+                {  this.state.displayForm && <StopForm onSubmit={ this.onSubmit } /> }
             </div>
             );
     }
